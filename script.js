@@ -1,17 +1,13 @@
-// Content behind double slashes is a comment. Use it for plain English notes,
-// or for code that you want to temporarily disable.
-
-// Extra practice: https://cdn.glitch.com/20b95798-6f01-45c6-8fc7-a706c95d44a9%2Flogos.jpg?v=1512863797321
+let dvdImage;
 
 function setup(){
-  // Code here runs only once
-  createCanvas(800, 600)
+  createCanvas(800, 600);
+  // We only want to load the logo once.
+  dvdImage = loadImage("https://cdn.glitch.com/eaea72a4-ac6d-4777-b76e-f37d75959aa5%2Fdvd.jpeg?1515761833387");
 }
 
 function draw(){
-  // Code here runs continuously
-  background(220)
-
-  // ellipse(50, 50, 50, 50)
-
+  background(220);
+  // Draw the logo at the new position.
+  image(dvdImage, 50, 50, 200, 150);
 }
