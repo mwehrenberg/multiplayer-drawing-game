@@ -7,7 +7,7 @@ function setup(){
   x = 50;
   y = 50;
   
-  masterVelocity = 3;
+  masterVelocity = 2;
   xVelocity =  masterVelocity;
   yVelocity = masterVelocity;
   imageWidth = 200;
@@ -19,19 +19,19 @@ function draw(){
   
   if (x > width - imageWidth) {
     // If the DVD is too far to the right, move left
-    xVelocity = -masterVelocity
+    xVelocity = -5 * masterVelocity
   } else if (x < 0) {
     // If the DVD is too far to the left, move right
-    xVelocity = 3
+    xVelocity = 5 * masterVelocity
   }
   x += xVelocity
   
   if (y > height - imageHeight) {
     // If the DVD is too far down, move up
-    yVelocity = -3
+    yVelocity = -1 * masterVelocity
   } else if (y < 0) {
     // If the DVD is too far up, move down
-    yVelocity = 3
+    yVelocity = masterVelocity
   }
   y += yVelocity
   
