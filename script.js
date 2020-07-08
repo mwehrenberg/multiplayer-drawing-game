@@ -1,5 +1,5 @@
 // We'll use variables for most of our colors in this code-along.
-let backgroundColor, color1, color2, textColor;
+let backgroundColor, color1, color2, textColor, globalS, globalB;
 
 function setup() {
   // Canvas & color settings
@@ -19,21 +19,24 @@ function setup() {
   // (c, 50, 100) will give pastels
   // (c, 100, 100) will give neons
   // (c, 100, 50) will give dark colors
-  color1 = color(0, 100, 50);
-  color2 = color(200, 80, 80);
+  globalS = 80;
+  globalB = 80;
+  color1 = color(0, globalS, globalB);
+  color2 = color(200, globalS, globalB);
 }
 
 function draw() {
   background(backgroundColor);
   // Call the drawCenterLine function here to run the three lines of code
   // contained in that function.
+  drawCenterLine();
 
 
   // The red and blue circles:
   fill(color1);
-  ellipse(100, 200, 50);
+  ellipse(width/4, height/2, 50);
   fill(color2);
-  ellipse(300, 200, 50);
+  ellipse(300, height/2, 50);
 
   // The grey circle and the text:
   fill(textColor);
@@ -46,6 +49,7 @@ function drawCenterLine() {
   // back off.
   // Remember a line segment in p5.js has four arguments: x1, y1, x2, y2
   stroke(textColor);
-  line(200, 0, 200, 400);
+  // width = canvas width, height = canvas height
+  line(width/2, 0, width/2, height);
   noStroke();
 }
