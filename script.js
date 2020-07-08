@@ -54,10 +54,20 @@ function draw() {
 function dayMode() {
   backgroundColor = color(95);
   // color1, color2, textColor
+  // Make color1 and color2 switch when going into night mode
+  // Change the textColor to white when in night mode (95), black = (20)
+  
+  color1 = color(0, globalS, globalB);
+  color2 = color(200, globalS, globalB);
+  textColor = color(20);
 }
 
 function nightMode() {
   backgroundColor = color(20);
+  
+  color1 = color(200, globalS, globalB);
+  color2 = color(0, globalS, globalB);
+  textColor = color(95);
   
 }
 
