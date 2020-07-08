@@ -1,3 +1,6 @@
+/* global createCanvas, colorMode, noStroke, backgroundColor, HSB, color, background,
+fill, ellipse, text, stroke, line, width, height */
+
 // We'll use variables for most of our colors in this code-along.
 let backgroundColor, color1, color2, textColor, globalS, globalB;
 
