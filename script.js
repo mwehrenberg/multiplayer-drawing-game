@@ -30,18 +30,35 @@ function draw() {
   // Call the drawCenterLine function here to run the three lines of code
   // contained in that function.
   drawCenterLine();
+  
+  // If mouse crosses half of the width of the screen, change to dark color background
+  if (mouseX > width/2) {
+    nightMode();
+  } else {
+    dayMode();
+  }
 
 
   // The red and blue circles:
   fill(color1);
   ellipse(width/4, height/2, 50);
   fill(color2);
-  ellipse(300, height/2, 50);
+  ellipse(0.75*width, height/2, 50);
 
   // The grey circle and the text:
   fill(textColor);
-  ellipse(50, 50, 50);
+  ellipse(mouseX, mouseY, 50);
   text("Flip the switch", 20, 20);
+}
+
+function dayMode() {
+  backgroundColor = color(95);
+  // color1, color2, textColor
+}
+
+function nightMode() {
+  backgroundColor = color(20);
+  
 }
 
 function drawCenterLine() {
