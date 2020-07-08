@@ -19,7 +19,7 @@ function setup() {
   // (c, 50, 100) will give pastels
   // (c, 100, 100) will give neons
   // (c, 100, 50) will give dark colors
-  color1 = color(0, 80, 80);
+  color1 = color(0, 100, 50);
   color2 = color(200, 80, 80);
 }
 
