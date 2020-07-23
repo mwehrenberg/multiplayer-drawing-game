@@ -1,4 +1,4 @@
-/* global createCanvas, colorMode, HSB, strokeWeight, background, rect, mouseX,
+/* global line, pmouseX, pmouseY, mouseIsPressed, keyCode, UP_ARROW, createCanvas, colorMode, HSB, strokeWeight, background, rect, mouseX,
 mouseY, stroke, fill */
 
 let brushHue
@@ -12,12 +12,22 @@ function setup() {
 }
 
 function draw() {
-  background(95);
   chooseColors();
-  rect(mouseX, mouseY, 15, 15);
+  //rect(mouseX, mouseY, 15, 15);
+  
+  if (mouseIsPressed){
+    line(pmouseX, pmouseY, mouseX, mouseY);
+  }
 }
 
 function chooseColors() {
+  brushHue = (brushHue+1)%360;
   stroke(brushHue, 50, 80);
   fill(brushHue, 50, 80);
+}
+
+function keyPressed(){
+  if (keyCode == 32 || keyCode == UP_ARROW){
+    background(95);
+  }
 }
