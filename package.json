@@ -1,0 +1,29 @@
+{
+  "name": "nodepractice",
+  "version": "1.0.0",
+  "description": "multiplayer drawing game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upperlinecode/cssi-p5-may-7-backup.git"
+  },
+  "keywords": [
+    "sockets",
+    "p5.js",
+    "node"
+  ],
+  "author": "Molly Wehrenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/upperlinecode/cssi-p5-may-7-backup/issues"
+  },
+  "homepage": "https://github.com/upperlinecode/cssi-p5-may-7-backup#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
